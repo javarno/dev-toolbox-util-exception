@@ -31,6 +31,11 @@
     <version>1.9.2</version>
   </parent>
 
+  <url>https://github.com/javarno/dev-toolbox-util</url>
+  <scm>
+    <connection>scm:git:https://github.com/javarno/dev-toolbox-util-exception.git</connection>
+  </scm>
+
   <dependencies>
     <!-- org.slf4j:slf4j-api is used for logging and to format the default message of an exception -->
     <dependency>
