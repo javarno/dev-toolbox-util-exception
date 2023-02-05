@@ -22,7 +22,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>dev-toolbox-util-exception</artifactId>
-  <version>0.9.1</version>
+  <version>0.9.2-SNAPSHOT</version>
 
   <parent>
     <groupId>org.dev-toolbox</groupId>
@@ -33,7 +33,7 @@
   <url>https://github.com/javarno/dev-toolbox-util</url>
   <scm>
     <connection>scm:git:https://github.com/javarno/dev-toolbox-util-exception.git</connection>
-    <tag>v0.9.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <dependencies>
