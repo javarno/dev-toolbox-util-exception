@@ -56,7 +56,7 @@ public class ParametricRuntimeExceptionTest {
 			final Object[] parameters = error.getParameters();
 			assertEquals(firstParameter, parameters[0]);
 			assertTrue(otherParameter == parameters[1]);
-			assertEquals(TestErrorIdentifier.TEST2.getDefaultMessage().replaceAll("\\{\\}", firstParameter), error.getMessage());
+			assertEquals(TestErrorIdentifier.TEST2.getDefaultMessage().replaceAll("\\{0\\}", firstParameter), error.getMessage());
 		}
 	}
 

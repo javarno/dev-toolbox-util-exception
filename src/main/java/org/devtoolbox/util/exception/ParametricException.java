@@ -16,28 +16,28 @@
  */
 package org.devtoolbox.util.exception;
 
-import java.time.OffsetDateTime;
-
-import org.slf4j.helpers.MessageFormatter;
+import java.text.MessageFormat;
+import java.time.Instant;
 
 /**
  * <p>Defines an exception using an identifier and optional parameters.</p>
  * <p>The additional functionalities compared to base exceptions are :</p>
  * <ul>
  *    <li>an identifier that enables to clearly identify the error</li>
- *    <li>additional data that can be used for the default error message or retrieved for error handling :<ul>
+ *    <li>additional data that can be used for the default error message or retrieved for error handling :
+ *    <ul>
  *        <li>the creation time</li>
  *        <li>an optional collection of user-defined parameters</li>
- *    </ul></li>
+ *    </ul>
  * </ul>
- * <p>Parametric exceptions uses the MessageFormatter from slf4j, which replaces {} by parameters.</p>
+ * <p>Parametric exceptions uses java.text.MessageFormat to format the messages.</p>
  *
  * @author Arnaud Lecollaire
  */
 public interface ParametricException {
 
-    /** Gets the time of this exception's creation. */
-    OffsetDateTime getCreationTime();
+    /** Gets the instant of this exception's creation. */
+	Instant getCreationTime();
 
     /** Gets the identifier of this exception. */
     ErrorIdentifier getIdentifier();
@@ -57,15 +57,14 @@ public interface ParametricException {
 
         /**
          * Formats an error message using the template from the error identifier and parameters.
-         * This formatter implementation uses SLF4J's MessageFormatter
          *
-         * @see org.slf4j.helpers.MessageFormatter
+         * @see java.text.MessageFormat
          * @param identifier error identifier containing the message template
          * @param parameters optional parameters
          * @return the formatted message
          */
         public static String formatMessage(final ErrorIdentifier identifier, final Object... parameters) {
-            return MessageFormatter.arrayFormat(identifier.getDefaultMessage(), parameters).getMessage();
+            return MessageFormat.format(identifier.getDefaultMessage(), parameters);
         }
     }
 }

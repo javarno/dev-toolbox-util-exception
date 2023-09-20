@@ -16,7 +16,7 @@
  */
 package org.devtoolbox.util.exception;
 
-import java.time.OffsetDateTime;
+import java.time.Instant;
 import java.util.Arrays;
 
 import org.slf4j.Logger;
@@ -36,7 +36,7 @@ public class ParametricRuntimeException extends RuntimeException implements Para
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ParametricRuntimeException.class);
 
-    private final OffsetDateTime creationTime = OffsetDateTime.now();
+    private final Instant creationTime = Instant.now();
     private final ErrorIdentifier identifier;
     private final Object[] parameters;
 
@@ -64,7 +64,7 @@ public class ParametricRuntimeException extends RuntimeException implements Para
     }
 
     @Override
-    public OffsetDateTime getCreationTime() {
+    public Instant getCreationTime() {
         return creationTime;
     }
 

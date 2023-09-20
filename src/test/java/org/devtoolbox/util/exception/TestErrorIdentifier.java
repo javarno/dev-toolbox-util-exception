@@ -21,7 +21,7 @@ package org.devtoolbox.util.exception;
  * @author Arnaud Lecollaire
  */
 public enum TestErrorIdentifier implements ErrorIdentifier {
-	TEST1("test1"), TEST2("test2 {}");
+	TEST1("test1"), TEST2("test2 {0}");
 
 	private final String defaultMessage;
 
