@@ -23,9 +23,10 @@ Runtime and checked implementations of parametric exceptions.
 
 history
 -------
-- v0.10.0 2023/09/20 : breaking changes : changed creation time type to Instant and formatter to java.text.MessageFormat
-- v0.9.1  2023/02/05 : slf4j / logback & maven plugins upgrade
-- v0.9.0  2022/05/14 : java 17
-- v0.8.0  2020/12/05 : breaking changes : renamed ParametericException to ParametricCheckedException, changed creation time to OffsetDateTime, added common interface and some javadoc
-- v0.7.0  2020/04/21 : java 14
+- v0.11.0 2023-09-23 : java 21
+- v0.10.0 2023-09-20 : breaking changes : changed creation time type to Instant and formatter to java.text.MessageFormat
+- v0.9.1  2023-02-05 : slf4j / logback & maven plugins upgrade
+- v0.9.0  2022-05-14 : java 17
+- v0.8.0  2020-12-05 : breaking changes : renamed ParametericException to ParametricCheckedException, changed creation time to OffsetDateTime, added common interface and some javadoc
+- v0.7.0  2020-04-21 : java 14
 - previous versions : history lost :)
